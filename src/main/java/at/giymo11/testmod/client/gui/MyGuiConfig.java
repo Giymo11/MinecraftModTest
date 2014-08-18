@@ -13,11 +13,11 @@ import net.minecraftforge.common.config.Configuration;
 public class MyGuiConfig extends GuiConfig {
     public MyGuiConfig(GuiScreen screen) {
         super(null, //parent GuiScreen
-              new ConfigElement(ConfigurationHandler.getConfiguration().getCategory(Configuration.CATEGORY_GENERAL)).getChildElements(),
+              new ConfigElement(ConfigurationHandler.getInstance().getConfiguration().getCategory(Configuration.CATEGORY_GENERAL)).getChildElements(),
               // ^ All elements in the "General" category
               Info.ID,
               false, //allRequireWorldRestart
               false, //allRequireModRestart
-              GuiConfig.getAbridgedConfigPath(ConfigurationHandler.getConfiguration().toString())); //title
+              GuiConfig.getAbridgedConfigPath(ConfigurationHandler.getInstance().getConfiguration().toString())); //title
     }
 }

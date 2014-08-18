@@ -17,11 +17,11 @@ public class Logger {
         FMLLog.log(logLevel, ex, "%s");
     }
 
-    public static void d(Object object) {
-        log(Level.DEBUG, String.valueOf(object));
+    public static void i(Object object) {
+        log(Level.INFO, String.valueOf(object));
     }
 
-    public static void d(Exception ex) {
-        log(Level.DEBUG, ex);
+    public static void i(Exception ex) {
+        log(Level.INFO, ex);
     }
 }

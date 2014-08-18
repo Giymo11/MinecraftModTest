@@ -3,6 +3,8 @@ package at.giymo11.testmod;
 import at.giymo11.testmod.handler.ConfigurationHandler;
 import at.giymo11.testmod.proxy.Proxy;
 import at.giymo11.testmod.reference.Info;
+import at.giymo11.testmod.reference.Items;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -25,7 +27,12 @@ public class TestMod {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        ConfigurationHandler.initConfiguration(event.getSuggestedConfigurationFile());
+        ConfigurationHandler.getInstance().initConfiguration(event.getSuggestedConfigurationFile());
+
+        Items.registerItems();
+
+        FMLCommonHandler.instance().bus().register(ConfigurationHandler.getInstance());
+
     }
 
     private boolean testValue = false;

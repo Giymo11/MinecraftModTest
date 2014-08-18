@@ -13,17 +13,25 @@ import java.io.File;
  */
 public class ConfigurationHandler {
 
-    private static Configuration configuration;
-    private static boolean testValue = false;
+    private static final ConfigurationHandler instance = new ConfigurationHandler();
 
-    public static void initConfiguration(File file) {
-        if(configuration == null)
-            configuration = new Configuration(file);
+    private Configuration configuration;
+    private boolean testValue = false;
 
-        loadConfiguration();
+    private ConfigurationHandler() {}
+
+    public static ConfigurationHandler getInstance() {
+        return instance;
     }
 
-    public static Configuration getConfiguration() {
+    public void initConfiguration(File file) {
+        if(configuration == null) {
+            configuration = new Configuration(file);
+            loadConfiguration();
+        }
+    }
+
+    public Configuration getConfiguration() {
         return configuration;
     }
 
@@ -33,7 +41,7 @@ public class ConfigurationHandler {
             loadConfiguration();
     }
 
-    private static void loadConfiguration() {
+    private void loadConfiguration() {
         try {
             configuration.load();
             testValue = configuration.get(Configuration.CATEGORY_GENERAL, "testValue", false, "Example Test Value").getBoolean();
@@ -44,7 +52,7 @@ public class ConfigurationHandler {
             for(StackTraceElement elem : ex.getStackTrace())
                 builder.append(elem.toString()).append("\n");
 
-            Logger.d(builder.toString());
+            Logger.i(builder.toString());
         } finally {
             if(configuration.hasChanged())
                 configuration.save();
