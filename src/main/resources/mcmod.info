@@ -1,0 +1,21 @@
+[
+{
+  "modid": "testmod",
+  "name": "TestMod",
+  "description": "A mod to explore Minecraft Modding",
+  "version": "0.1",
+  "mcversion": "1.7.10",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [
+    "Giymo11"
+  ],
+  "credits": "Created by Giymo11",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]
