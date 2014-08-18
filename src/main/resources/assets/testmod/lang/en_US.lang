@@ -1,2 +1,3 @@
 item.testmod:mapleLeaf.name=Best Maple Leaf
 tile.testmod:austrianFlag.name=Not an Austrian Flag
+itemGroup.testmod=TestMod Stuff

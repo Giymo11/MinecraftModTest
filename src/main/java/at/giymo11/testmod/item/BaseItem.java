@@ -1,6 +1,7 @@
 package at.giymo11.testmod.item;
 
 import at.giymo11.testmod.reference.Info;
+import at.giymo11.testmod.reference.MyCreativeTabs;
 import net.minecraft.item.Item;
 
 /**
@@ -10,6 +11,7 @@ public abstract class BaseItem extends Item {
 
     public BaseItem() {
         super();
+        setCreativeTab(MyCreativeTabs.testModTab);
     }
 
     @Override
@@ -22,4 +24,6 @@ public abstract class BaseItem extends Item {
         // adds the id so forge knows where to look
         return super.setTextureName(Info.ID + ":" + name);
     }
+
+
 }

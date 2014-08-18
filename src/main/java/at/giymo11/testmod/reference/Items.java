@@ -7,6 +7,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 /**
  * Created by Giymo11 on 18.08.2014.
  */
+@GameRegistry.ObjectHolder(Info.ID)
 public class Items {
 
     public class Names {

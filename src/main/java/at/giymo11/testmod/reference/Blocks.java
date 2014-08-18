@@ -7,6 +7,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 /**
  * Created by Giymo11 on 19.08.2014.
  */
+@GameRegistry.ObjectHolder(Info.ID)
 public class Blocks {
 
     public class Names {
