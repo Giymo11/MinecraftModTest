@@ -9,6 +9,6 @@ public class MapleLeaf extends BaseItem {
     public MapleLeaf() {
         super();
         setUnlocalizedName(Items.Names.mapleLeaf);
-        setTextureName("mapleLeaf");
+        setTextureName(Items.Names.mapleLeaf);
     }
 }

@@ -2,6 +2,7 @@ package at.giymo11.testmod;
 
 import at.giymo11.testmod.handler.ConfigurationHandler;
 import at.giymo11.testmod.proxy.Proxy;
+import at.giymo11.testmod.reference.Blocks;
 import at.giymo11.testmod.reference.Info;
 import at.giymo11.testmod.reference.Items;
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -30,6 +31,7 @@ public class TestMod {
         ConfigurationHandler.getInstance().initConfiguration(event.getSuggestedConfigurationFile());
 
         Items.registerItems();
+        Blocks.registerBlocks();
 
         FMLCommonHandler.instance().bus().register(ConfigurationHandler.getInstance());
 

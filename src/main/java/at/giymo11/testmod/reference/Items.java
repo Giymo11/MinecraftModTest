@@ -10,7 +10,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class Items {
 
     public class Names {
-        public static final String mapleLeaf = "mapleleaf";
+        public static final String mapleLeaf = "mapleLeaf";
     }
 
     public static final BaseItem mapleLeaf = new MapleLeaf();
