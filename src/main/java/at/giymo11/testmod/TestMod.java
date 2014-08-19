@@ -5,6 +5,7 @@ import at.giymo11.testmod.proxy.Proxy;
 import at.giymo11.testmod.reference.Blocks;
 import at.giymo11.testmod.reference.Info;
 import at.giymo11.testmod.reference.Items;
+import at.giymo11.testmod.reference.Recipes;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
@@ -37,13 +38,9 @@ public class TestMod {
 
     }
 
-    private boolean testValue = false;
-
-
-
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
-
+        Recipes.registerRecipes();
     }
 
     @Mod.EventHandler
